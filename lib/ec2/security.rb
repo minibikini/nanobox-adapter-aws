@@ -43,7 +43,6 @@ class ::EC2::Security
 
   def fetch_group
     # filter     = [{'Name' => 'group-name', 'Value' => 'Nanobox'}]
-    puts "fetch: " + ENV["SECURITY_GROUP_NAME"]
     filter     = [{'Name' => 'group-name', 'Value' => ENV["SECURITY_GROUP_NAME"]}]
     res        = manager.DescribeSecurityGroups('Filter' => filter)
     group_info = res["DescribeSecurityGroupsResponse"]["securityGroupInfo"]
