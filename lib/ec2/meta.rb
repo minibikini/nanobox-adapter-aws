@@ -5,7 +5,7 @@ class ::EC2::Meta
     def to_json
       {
         id:                'aws',
-        name:              'Amazon Web Services',
+        name:              "AWS #{ENV["SECURITY_GROUP_NAME"]}",
         short_name:        'AWS',
         server_nick_name:  'EC2 Instance',
         default_region:    'us-east-1',

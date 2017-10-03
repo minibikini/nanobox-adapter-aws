@@ -26,6 +26,8 @@ before do
   request.body.rewind
   request_body = request.body.read
   @request_payload = JSON.parse(request_body) unless request_body.empty?
+
+  ENV['SECURITY_GROUP_NAME'] = request.host.split('.').first
 end
 
 get '/' do
